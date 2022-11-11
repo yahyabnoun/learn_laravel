@@ -15,7 +15,11 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome',
+    [
+        'produit' => 'salade',
+        'animals' =>['chien', 'chat', 'cheval']
+]);
 });
 
 // Route::get('/Home/{name?}',[HomeController::class,'index']);

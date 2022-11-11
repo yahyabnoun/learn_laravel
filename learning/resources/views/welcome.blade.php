@@ -13,7 +13,31 @@
 
 {{--pour ajouter content de la page  --}}
 @section('content')
-    <div class="row mt-4"><h1>Accueil</h1></div>
+    {{-- <div class="row mt-4"><h1>Accueil</h1></div> --}}
+    <div class="row mt-4">
+ 
+   
+    <h5> //////////////// Le resulta de produit si existe ou no ////////////////</h5>    
+    @isset($produit)    
+  
+         <p>Le produit existe</p>    
+  
+    @endisset
+
+
+    <h5> //////////////// Le resulta de animals si existe ou no ////////////////</h5>    
+    @forelse ($animals as $animal)​
+
+    <li> {{ $animal }} </li>​
+
+@empty​
+
+    <p>Aucun animal existant.</p>​
+
+@endforelse
+
+
+</div>
 @endsection
 
 
