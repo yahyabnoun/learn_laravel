@@ -17,7 +17,7 @@
     <div class="row mt-4">
  
    
-    <h5> //////////////// Le resulta de produit si existe ou no ////////////////</h5>    
+    <h5> //////////////// Le résultat de produit  ////////////////</h5>    
     @isset($produit)    
   
          <p>Le produit existe</p>    
@@ -25,7 +25,7 @@
     @endisset
 
 
-    <h5> //////////////// Le resulta de animals si existe ou no ////////////////</h5>    
+    <h5> //////////////// Le résultat de animals  ////////////////</h5>    
     @forelse ($animals as $animal)​
 
     <li> {{ $animal }} </li>​
