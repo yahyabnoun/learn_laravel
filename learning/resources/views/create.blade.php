@@ -18,13 +18,15 @@ body{background-color: #eeeeee}
 
 
 @section('content')
+
 <div class="card bg-light  rounded  mx-auto mt-4">
-    
+
     <div class="card-header">
          
          <h5 class=" ">Ajouter un post </h5>
       </div>
     <div class="card-body">
+       
     <form action={{route('post.store')}} method="POST">
         @csrf
         <div class="my-4">
@@ -42,7 +44,15 @@ body{background-color: #eeeeee}
         </div>
             <button class="btn btn-primary">Submit</button>
       </form>
-
+      @if ($errors->any())
+      <div class=" alert alert-danger mt-3">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+      @endif
 </div>
 </div>
 

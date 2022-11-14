@@ -44,6 +44,12 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
+
+
+        $request->validate([
+            'title' => 'required|min:5|max:100',
+            'body' => 'required|min:10|max:200',
+        ]);
         $post= new Post();
         $post->title =$request->title;
         $post->slug =Str::slug($request->title);
