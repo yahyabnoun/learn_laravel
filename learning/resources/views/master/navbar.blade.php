@@ -12,7 +12,9 @@
           <li class="nav-item">
             <a class="nav-link" href={{url('/home')}}>postes</a>
           </li>
-         
+          <li class="nav-item">
+            <a class="nav-link" href={{route('post.create')}}>Ajouter</a>
+          </li>
  
         </ul>
         <form class="d-flex" role="search">

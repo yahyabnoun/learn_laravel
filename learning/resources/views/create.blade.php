@@ -1,7 +1,7 @@
 @extends('master.layout')
 
 @section('title')
-{{$post->title}}
+create
 @endsection
 
 {{-- {{$hello.' '.$name}}  http://127.0.0.1:8000/Home/yahya  output (hello yahya) --}}
@@ -18,26 +18,31 @@ body{background-color: #eeeeee}
 
 
 @section('content')
-<div class="grid-div mt-auto">
-
-
+<div class="card bg-light  rounded  mx-auto mt-4">
+    
+    <div class="card-header">
+         
+         <h5 class=" ">Ajouter un post </h5>
+      </div>
+    <div class="card-body">
     <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <div class="my-4">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" placeholder="Title" >
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+        <div class="my-4">
+            <input type="file" class="form-control" name="image">
         </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <div class="my-4">
+
+            <label for="body" class="form-label">Description</label>
+            <textarea type="text" class="form-control" name="body" placeholder="Description"></textarea>  
+ 
         </div>
             <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 
+</div>
 </div>
 
 @endsection

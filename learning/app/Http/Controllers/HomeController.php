@@ -37,4 +37,8 @@ class HomeController extends Controller
             'post' => $post,
         ]);
     }
+    public function create()
+    {
+        return view('create');
+    }
 }
