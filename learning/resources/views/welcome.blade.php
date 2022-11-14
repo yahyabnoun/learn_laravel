@@ -13,35 +13,28 @@
 
 {{--pour ajouter content de la page  --}}
 @section('content')
-    {{-- <div class="row mt-4"><h1>Accueil</h1></div> --}}
-    {{-- <div class="row mt-4">
+    <div class="row mt-4"><h1>Accueil</h1></div>
+    <div class="row mt-4">
     <h5> //////////////// Le résultat de produit  ////////////////</h5>    
     @isset($produit)    
          <p>Le produit existe</p>    
     @endisset
     <h5> //////////////// Le résultat de animals  ////////////////</h5>    
     @forelse ($animals as $animal)​
-    <li> {{ $animal }} </li>​ --}}
-{{-- @empty     
-    <p>Aucun animal existant.</p>               
-@endforelse --}}
-{{-- </div> --}}
+    <li> {{ $animal }} </li>​
+@empty     
+    <p>Aucun animal existant.</p>  
+
+@endforelse
+<button > <a href="home">GO TO Home</a></button>
+</div>
 
 
-<div class="row mt-5"><h1 class="mb-5">Accueil</h1>
 
 
 
-@foreach ($posts as $post)
-<div class="card mx-2" style="width: 18rem;">
-    <img src="https://picsum.photos/200/300?grayscale" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{$post['title']}}</h5>
-      <p class="card-text">{{$post['body']}}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-@endforeach
+
+
 
 
 

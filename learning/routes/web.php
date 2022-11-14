@@ -18,27 +18,12 @@ Route::get('/', function () {
     return view('welcome',
     [
         'produit' => 'salade',
-        'animals' =>['chien', 'chat', 'cheval'],
-        'posts' =>[
-            [
-            'id'=> 1,
-            'title'=> 'post title 1',
-            'body'=> 'post body 1',
-        ],
-        [
-            'id'=> 2,
-            'title'=> 'post title 2',
-            'body'=> 'post body 2',
-        ],
-        [
-            'id'=> 3,
-            'title'=> 'post title 3',
-            'body'=> 'post body 3',
-        ]]
+        'animals' =>['chien', 'chat', 'cheval']
+         
 ]);
 });
 
 // Route::get('/Home/{name?}',[HomeController::class,'index']);
 
 
-Route::get('/Home',[HomeController::class,'index']);
+Route::get('/home',[HomeController::class,'index']);
