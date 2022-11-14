@@ -27,3 +27,4 @@ Route::get('/', function () {
 
 
 Route::get('/home',[HomeController::class,'index']);
+Route::get('/post/{slug}',[HomeController::class,'show'])->name('post.show');

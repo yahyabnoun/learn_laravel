@@ -37,12 +37,12 @@ body{background-color: #eeeeee}
     <div class="card-body">
       <h5 class="card-title">{{$post->title}}</h5>
       <p class="card-text">{{$post->body}}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href={{route('post.show',$post->slug)}} class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
 @endforeach
 </div>
-<div class="d-flex">  {{ $posts->links() }}   </div>
+<div class="d-flex mt-4 justify-content-center">  {{ $posts->links() }}   </div>
 
 @endsection
 
