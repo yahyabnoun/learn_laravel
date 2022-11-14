@@ -9,7 +9,7 @@
     @yield('style')
 </head>
 <body>
-   
+   @include('master.navbar')
 <div class="container">
 
     @yield('content')
