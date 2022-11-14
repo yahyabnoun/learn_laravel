@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Post;
-
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -40,5 +40,16 @@ class HomeController extends Controller
     public function create()
     {
         return view('create');
+    }
+    public function store(Request $request)
+    {
+        // dd($request->all());
+        $post= new Post();
+        $post->title =$request->title;
+        $post->slug =Str::slug($request->title);
+        $post->body =$request->body;
+        $post->image ='https://via.placeholder.com/640x480.png/00ee44?text=odit';
+        $post->save() ;
+
     }
 }

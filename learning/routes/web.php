@@ -29,3 +29,4 @@ Route::get('/', function () {
 Route::get('/home',[HomeController::class,'index']);
 Route::get('/post/{slug}',[HomeController::class,'show'])->name('post.show');
 Route::get('/create/post',[HomeController::class,'create'])->name('post.create');
+Route::post('/add/post',[HomeController::class,'store'])->name('post.store');

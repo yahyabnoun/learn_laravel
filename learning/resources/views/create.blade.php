@@ -25,7 +25,8 @@ body{background-color: #eeeeee}
          <h5 class=" ">Ajouter un post </h5>
       </div>
     <div class="card-body">
-    <form>
+    <form action={{route('post.store')}} method="POST">
+        @csrf
         <div class="my-4">
             <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control" name="title" placeholder="Title" >
@@ -39,7 +40,7 @@ body{background-color: #eeeeee}
             <textarea type="text" class="form-control" name="body" placeholder="Description"></textarea>  
  
         </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button class="btn btn-primary">Submit</button>
       </form>
 
 </div>
